@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .obj{
+            width: 500px;
+            height: 200px;
+            background-color: aqua;
+            margin-top: 10px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <button class="hidebtn">Hide</button>
+    <button class="showbtn">Show</button>
+    <button class="togglebtn">Toggle</button>
+    <button class="annimate">Animat</button>
+    <div class="obj">
+        <p>Hein Htet Zaw</p>
+    </div>
+    
+    <script src="./Js/jquery.js"></script>
+    <script>
+       $(".hidebtn").click(function(){
+       $(".obj").hide(1000);
+       });
+       $(".showbtn").click(function () {
+           $(".obj").show(1000);
+       });
+       $(".togglebtn").click(function () {
+          $(".obj").fadeToggle(1000); 
+       });
+       $(".annimate").click(function () {
+           $(".obj").animate({
+               top:"+=200px",
+              left:"+=100px"
+           },3000)
+       });
+    </script>
+</body>
+</html>

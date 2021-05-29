@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p" title="This is Attribute">This is DOM</p>
+    <input type="text" id="input">
+    <select name="" id="select">
+        <option value="">Myanmar</option>
+        <option value="">China</option>
+        <option value="">Thailand</option>
+    </select>
+        <br>
+        <br>
+        <button id="btn">Okay</button>
+        <script src="./Js/jquery.js"></script>
+        <script>
+            $("#btn").click(function () {
+                $("#p").attr("title","this is attr set ")
+                
+                
+            })
+        </script>
+</body>
+</html>

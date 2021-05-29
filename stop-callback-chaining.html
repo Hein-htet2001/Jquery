@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+          .obj{
+            width: 500px;
+            height: 200px;
+            background-color: aqua;
+            margin-top: 10px;
+            position: relative;
+        }
+   </style>
+</head>
+<body>
+    
+    <button class="ani">Annimate</button>
+    <button class="stop">stop</button>
+    <div class="obj">
+        <p >Hein Htet Zaw</p>
+    </div>
+    <p class="chain">Hein Htet Zaw</p>
+    <script src="./Js/jquery.js"></script>
+    <script>
+            $(".ani").click(function () {
+                $(".obj").animate({
+                    left:"20px",
+                    top:"20px"
+                },2000,function () {
+                       console.log("This is Animate")//callback function
+                })
+            });
+            $(".stop").click(function () {
+                $(".obj").stop()
+            });
+            $(".chain").css("color","purple").slideUp(2000).slideDown(2000);//chainning
+    </script>
+</body>
+</html>
